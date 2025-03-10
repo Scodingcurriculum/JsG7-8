@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* CSS styles to center the clock and style its appearance */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: olive; /* Background color */
+        }
+
+        .clock {
+            color: #fff; /* Text color (white) */
+            font-size: 3em; /* Font size */
+            text-align: center; /* Center align text */
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <!-- The clock container -->
+        <div id="time">12:00:00</div>
+        <!-- Display the time here -->
+    </div>
+
+    <script>
+        // JavaScript code to update the clock
+        function updateTime() {
+            const now = new Date(); // Get the current date and time
+            const time = now.toLocaleTimeString(); // Convert the time to a string
+            document.getElementById('time').textContent = time; // Update the time display
+        }
+
+        // Call updateTime every second to update the time
+        setInterval(updateTime, 1000);
+
+        updateTime(); // Initial call to display the time immediately
+    </script>
+</body>
+</html>
